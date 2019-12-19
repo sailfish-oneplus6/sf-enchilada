@@ -1,7 +1,12 @@
 # TWRP fixes
 
-Grab the latest busybox binary for armv8l
-rename to `busybox` and copy to device
-boot twrp and get a shell
-cd to your downloaded busybox binary
-run `./busybox install busybox /sbin/`
+1. Grab the latest busybox binary for armv8l
+2. Rename to `busybox` and copy to device (root of internal storage)
+3. Boot twrp and get a shell
+4. 
+```sh
+cd /sdcard
+chmod +x busybox
+```
+
+If you're using my [hybris-boot](https://github.com/sailfish-oneplus6/hybris-boot) repo, flashing the zip will use this busybox binary instead of the old and broken one the current build of TWRP uses.
