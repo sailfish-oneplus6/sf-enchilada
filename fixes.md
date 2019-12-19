@@ -1,3 +1,9 @@
+# Hybris-hal fixes
+```
+system/update_engine/update_status_utils.cc:19:10: fatal error: 'update_engine/dbus-constants.h' file not found
+```
+* Fetch the file from [here](https://gist.github.com/calebccff/8ad08f58f83ac9cd506484e3f4d23cbb) and put it in `system/update_engine/`
+
 # TWRP fixes
 
 1. Grab the latest busybox binary for armv8l
