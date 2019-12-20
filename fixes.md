@@ -4,6 +4,12 @@ system/update_engine/update_status_utils.cc:19:10: fatal error: 'update_engine/d
 ```
 * Fetch the file from [here](https://gist.github.com/calebccff/8ad08f58f83ac9cd506484e3f4d23cbb) and put it in `system/update_engine/`
 
+# Packaging droid-hal-device
+```
+No provider of 'community-adaptation' found.
+```
+* run: `sb2 -t $VENDOR-$DEVICE-$PORT_ARCH -m sdk-install -R ssu ar adaptation-community-common http://repo.merproject.org/obs/nemo:/devel:/hw:/common/sailfish_latest_armv7hl/`
+
 # TWRP fixes
 
 1. Grab the latest busybox binary for armv8l
