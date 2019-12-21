@@ -10,11 +10,20 @@ hybris-patches/apply-patches --mb
 
 ### Every time
 
+
+Build android parts (boot image + device parts)
 ```sh
-# Build android parts (boot image + device parts)
 HABUILD_SDK $ mka hybris-hal
-# Copy the fstab to out so that mount units for /system and /vendor get generated properly
+```
+
+Copy the fstab to out so that mount units for /system and /vendor get generated properly
+
+```sh
 PLATFORM_SDK $ cp device/oneplus/sdm845-common/rootdir/etc/fstab.qcom out/target/product/enchilada/root/
-# Build Sailfish packages and generate a rootfs
+```
+
+Build Sailfish packages and generate a rootfs
+
+```sh
 PLATFORM_SDK $ rpm/dhd/helpers/build_packages.sh
 ```
