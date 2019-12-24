@@ -5,7 +5,7 @@
 
 ```sh
 # Hybris-16.0 specific patches, not in the HADK yet
-hybris-patches/apply-patches --mb
+hybris-patches/apply-patches.sh --mb
 ```
 
 ### Every time
