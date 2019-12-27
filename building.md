@@ -52,7 +52,7 @@ git clone https://github.com/sailfish-oneplus6/local_manifests .repo/local_manif
 
 ```sh
 # Hybris-16.0 specific patches, not in the HADK yet
-hybris-patches/apply-patches --mb
+hybris-patches/apply-patches.sh --mb
 ```
 
 ### Every time
