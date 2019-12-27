@@ -14,6 +14,8 @@ I am not responsible for any loss of data or stability due to what you decided t
 
 Please note running SFOS with an encrypted /data partition is untested.
 
+You must be running OOS 9.x on slot A prior to following these instructions.
+
 1. Grab [this TWRP](https://dl.twrp.me/enchilada/twrp-3.3.1-2-enchilada.img.html) then boot into fastboot mode
 ```sh
 # update packages are always flashed to inactive slot (in this case slot_a)
