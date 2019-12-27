@@ -57,11 +57,16 @@ hybris-patches/apply-patches.sh --mb
 
 After running `mka hybris-hal` also run the following on first build:
 
-`[PLATFORM]`
+`[HABUILD]`
 ```sh
 echo "MINIMEDIA_AUDIOPOLICYSERVICE_ENABLE := 1" > external/droidmedia/env.mk
 sed "s/Werror/Werror -Wno-unused-parameter/" -i frameworks/av/services/camera/libcameraservice/Android.mk
 mka droidmedia audioflingerglue
+```
+
+`[PLATFORM]`
+```sh
+bp -gg
 ```
 
 ## Every build
