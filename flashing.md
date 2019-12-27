@@ -1,6 +1,6 @@
 # Flashing
 
-## NOTE on dual booting:
+## NOTE on dual booting
 
 If your current Android system is installed on slot b, you will be able to dual boot between SFOS and android with ease, and you can even run non LOS ROMs (like OOS) on slot b.
 
