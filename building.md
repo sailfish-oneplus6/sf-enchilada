@@ -35,8 +35,6 @@ You can now follow the [OnePlus 5 Building Guide](https://github.com/sailfishos-
 
 # Quick build - up and running image as fast as possible
 
-
-
 ## First time
 
 ### Setup source tree
@@ -48,29 +46,65 @@ repo init -u git://github.com/mer-hybris/android.git -b hybris-16.0 --depth 1
 git clone https://github.com/sailfish-oneplus6/local_manifests .repo/local_manifests
 ```
 
-### 
+### Sync all the required packages
 
+`[HABUILD]`
 ```sh
+repo sync -c -j`nproc` --fetch-submodules --no-clone-bundle --no-tags
 # Hybris-16.0 specific patches, not in the HADK yet
 hybris-patches/apply-patches.sh --mb
 ```
 
-### Every time
+After running `mka hybris-hal` also run the following on first build:
 
+`[PLATFORM]`
+```sh
+echo "MINIMEDIA_AUDIOPOLICYSERVICE_ENABLE := 1" > external/droidmedia/env.mk
+sed "s/Werror/Werror -Wno-unused-parameter/" -i frameworks/av/services/camera/libcameraservice/Android.mk
+mka droidmedia audioflingerglue
+```
+
+## Every build
 
 Build android parts (boot image + device parts)
+
+`[HABUILD]`
 ```sh
-HABUILD_SDK $ mka hybris-hal
+mka hybris-hal
 ```
 
 Copy the fstab to out so that mount units for /system and /vendor get generated properly
 
 ```sh
-PLATFORM_SDK $ cp device/oneplus/sdm845-common/rootdir/etc/fstab.qcom out/target/product/enchilada/root/
+cp device/oneplus/sdm845-common/rootdir/etc/fstab.qcom out/target/product/enchilada/root/
 ```
 
 Build Sailfish packages and generate a rootfs
 
+`[PLATFORM]`
 ```sh
-PLATFORM_SDK $ rpm/dhd/helpers/build_packages.sh
+bp
 ```
+
+## Tips
+
+### When/what to build a new image
+
+#### Configs
+
+If only modifying sparse files it is safe to only run:
+```sh
+bp -cvi
+```
+This builds `droid-configs-enchilda`, `droid-version-enchilada` and then generates a new image.
+
+#### Android (HAL) parts
+
+If modifying fstab or any `.rc` files, run
+```sh
+bp -dvi
+```
+This builds `droid-hal-enchilda`, `droid-version-enchilada` and then generates a new image.
+
+
+#### Most of the time, you don't need to rebuild everything.
