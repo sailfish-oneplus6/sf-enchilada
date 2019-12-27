@@ -8,9 +8,10 @@ If your current Android system is installed on slot b, you will be able to dual 
 
 If not, you will need to switch your active slot to slot a with `fastboot --set-active=a` and then flash an update package from TWRP. If this doesn't work, you can switch the active slot by booting to TWRP and nvigating to "Reboot" -> "Slot A", which will switch the active slot to A upon next boot.
 
-Sailfish OS will ONLY work if installed to a specific slot due to current limitations in Treble support in Sailfish.
+Sailfish OS will ONLY work if installed to SLOT A due to current limitations in Treble support.
 
 #### Disclaimer: I am not responsible for any loss of data or stability due to what you decided to do to your phone.
+Please note running SFOS with an encrypted /data partition has not been properly tested.
 
 You must be running OOS 9.x on slot A prior to following these instructions.
 
