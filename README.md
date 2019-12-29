@@ -2,7 +2,7 @@
 
 A repo containing all useful general information for porting to the OnePlus 6 / enchilada.
 
-<img src="/sailfish-oneplus6/sf-enchilada/raw/master/images/about.png" alt="about" style="max-width:33%;">
+<img src="images/about.png" alt="about" style="max-width:33%;">
 ## [Build Guide](building.md)
 
 # Issues
