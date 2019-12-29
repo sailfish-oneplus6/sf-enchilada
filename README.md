@@ -2,7 +2,7 @@
 
 A repo containing all useful general information for porting to the OnePlus 6 / enchilada.
 
-<img src="images/about.png" alt="about" style="max-width:33%;"></img>
+<img src="images/about.png" alt="about" width="260"></img>
 
 ## [Build Guide](building.md)
 
