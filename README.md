@@ -1,7 +1,8 @@
 # sf-enchilada
 
-A repo containing all useful general information for porting to the OnePlus 6 / [enchilada].
+A repo containing all useful general information for porting to the OnePlus 6 / enchilada.
 
+![about](images/about.png)
 ## [Build Guide](building.md)
 
 # Issues
