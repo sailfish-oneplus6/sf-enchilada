@@ -6,7 +6,7 @@
 
 * HABUILD_SDK: `[HABUILD]`
 
-# First build
+# First Time Setup
 
 * Create the file `~/.hadk.env` with [this contents](files/.hadk.env)
 * Create the file `~/.mersdk.profile` with [this contents](files/.mersdk.profile)
@@ -28,12 +28,10 @@ export PATH="$HOME/bin:$PATH"
 
 Now follow the [OnePlus 5 initial building guide](https://github.com/sailfishos-oneplus5/important/blob/master/INITIAL-BUILDING.md#setup-the-platform-sdk) from `setup the platform sdk`, it's safe to ignore all OnePlus 5 specific information.
 
-You can now follow the [OnePlus 5 Building Guide](https://github.com/sailfishos-oneplus5/important/blob/master/BUILDING.md).
-
 > Thanks [@deathmist](https://github.com/JamiKettunen) ;)
 
 
-# Quick build - up and running image as fast as possible
+# From source to device
 
 ## First time
 
@@ -55,7 +53,10 @@ repo sync -c -j`nproc` --fetch-submodules --no-clone-bundle --no-tags
 hybris-patches/apply-patches.sh --mb
 ```
 
-After running `mka hybris-hal` also run the following on first build:
+`[HABUILD]`
+```sh
+mka hybris-hal
+```
 
 `[HABUILD]`
 ```sh
