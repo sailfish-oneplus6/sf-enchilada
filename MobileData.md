@@ -9,7 +9,7 @@
 * Pull down and tap "*Connect to Internet*", then tap on SIM 1
 * Leave the phone on "*Connecting*" - it's safe the let the screen turn off.
 * It should connect within a few minutes, if it does please [create an issue](https://github.com/sailfish-oneplus6/sf-enchilada/issues/new).
-Please include "*[Data]*" in the title, and if possible include your region and data carrier.
+Please include "*[Data]*" in the title, and if possible include your region and data carrier. It would also be greatly appreciated if you fork this repo and create a PR to update the table below.
 
 ## Working Data
 
