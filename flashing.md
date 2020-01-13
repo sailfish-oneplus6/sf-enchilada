@@ -23,7 +23,6 @@ fastboot boot twrp-3.3.1-2-enchilada.img
 ```
 2. Format /data (Wipe -> Format Data)
 #### Please note running SFOS with an encrypted /data partition can cause issues
-2. asdf
 3. Flash [dm-verity and forcencrypt disabler](https://zackptg5.com/android.php#disverfe) to disable encryption on SLOT B, you should flash this after flashing any OTAs to prevent data being encrypted.
 4. Dirty flash Lineage OS 16.0, grab the [latest nightly from here](https://wiki.lineageos.org/devices/enchilada/).
 5. Reboot back into TWRP, navigate to the reboot menu and check the current slot, if it's SLOT A then you're good to go, otherwise flash LOS again.
