@@ -12,7 +12,7 @@ Currently not available in Sailfish OS (all devices). I will update if and when 
 
 ### Android Apps
 
-There is some work on porting Anbox to Sailfish OS, it isn't currently a major priority but hopefully we will see some Android app support within the next 6months-1year.
+There is some work on porting Anbox to Sailfish OS, it isn't currently a major priority but hopefully we will see some Android app support within the next 6months-1year. There is nothing I can do to add suppoort for Android apps until then.
 
 ### Updates
 
@@ -21,6 +21,8 @@ I will release updates for:
 * New versions of Sailfish OS
 * Breaking bug fixes
 * Kernel optimisations
+
+Please don't spam my inbox with requests for updates, they will come as soon as is feasible.
 
 ## Development Tracking
 
