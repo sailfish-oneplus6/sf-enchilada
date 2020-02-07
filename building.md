@@ -11,6 +11,14 @@
 * Create the file `~/.hadk.env` with [this contents](files/.hadk.env)
 * Create the file `~/.mersdk.profile` with [this contents](files/.mersdk.profile)
 * Create the file `~/.mersdubu.profile` with [this contents](files/.mersdkubu.profile)
+* Modify your `.bashrc` to contain the following:
+```sh
+export PATH=$HOME/bin:$PATH
+export PLATFORM_SDK_ROOT="/srv/mer"
+export ANDROID_ROOT="$HOME/Sailfish/src"
+alias sfossdk="$PLATFORM_SDK_ROOT/sdks/sfossdk/mer-sdk-chroot"
+```
+[source](https://github.com/sailfishos-oneplus5/important/blob/master/files/.bashrc)
 
 Download and install `repo`
 
