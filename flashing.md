@@ -10,6 +10,8 @@ If not, you will need to switch your active slot to slot a with `fastboot --set-
 
 Sailfish OS will ONLY work if installed to SLOT A due to current limitations in Treble support.
 
+## Flashing Instructions
+
 #### Disclaimer: I am not responsible for any loss of data or stability due to what you decided to do to your phone.
 
 You must be running OOS 9.x on slot A prior to following these instructions.
