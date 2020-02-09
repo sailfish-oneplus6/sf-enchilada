@@ -1,5 +1,4 @@
 PS1="PlatformSDK $PS1"
-echo $PS1
 if [ -d /etc/bash_completion.d ]; then
    for i in /etc/bash_completion.d/*;
    do
@@ -79,6 +78,8 @@ choose_target() {
 	sed "s/DEVICE=.*/DEVICE=\"$device\"/" -i $HOME/.hadk.env
 	hadk
 }
+
+sudo mount --bind /parentroot/data /data
 
 hadk
 choose_target
