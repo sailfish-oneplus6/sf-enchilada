@@ -90,7 +90,7 @@ mka hybris-hal
 Copy the fstab to out so that mount units for /system and /vendor get generated properly
 
 ```sh
-cp device/oneplus/sdm845-common/rootdir/etc/fstab.qcom out/target/product/enchilada/root/
+cp device/oneplus/sdm845-common/rootdir/etc/fstab.qcom out/target/product/*/root/
 ```
 
 Build Sailfish packages and generate a rootfs
@@ -110,7 +110,7 @@ If only modifying sparse files it is safe to only run:
 ```sh
 bp -cvi
 ```
-This builds `droid-configs-enchilda`, `droid-version-enchilada` and then generates a new image.
+This builds `droid-configs-$DEVICE`, `droid-version-$DEVICE` and then generates a new image.
 
 #### Android (HAL) parts
 
@@ -118,7 +118,7 @@ If modifying fstab or any `.rc` files, run
 ```sh
 bp -dvi
 ```
-This builds `droid-hal-enchilda`, `droid-version-enchilada` and then generates a new image.
+This builds `droid-hal-$DEVICE`, `droid-version-$DEVICE` and then generates a new image.
 
 
 #### Most of the time, you don't need to rebuild everything.
