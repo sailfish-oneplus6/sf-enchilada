@@ -59,6 +59,7 @@ git clone https://github.com/sailfish-oneplus6/local_manifests .repo/local_manif
 repo sync -c -j`nproc` --fetch-submodules --no-clone-bundle --no-tags
 # Hybris-16.0 specific patches, not in the HADK yet
 hybris-patches/apply-patches.sh --mb
+git clone --recurse-submodules https://github.com/mer-hybris/libhybris hybris/mw/libhybris
 ```
 
 `[HABUILD]`
