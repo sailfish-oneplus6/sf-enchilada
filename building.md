@@ -101,6 +101,13 @@ Build Sailfish packages and generate a rootfs
 bp
 ```
 
+If you get an error like `No tags describe HEAD, will not fix package version` when building `rpm/`
+
+`[PLATFORM]`
+```sh
+sb2 -t $VENDOR-$DEVICE-$PORT_ARCH -m sdk-install -R zypper in droid-config-$DEVICE
+```
+
 ## Tips
 
 ### When/what to build a new image
