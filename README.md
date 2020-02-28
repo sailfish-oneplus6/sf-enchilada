@@ -1,6 +1,6 @@
 # Looking for new maintainers!
 
-If you have any experience developing / maintaining Sailfish - or are keen to learn, [fire me an email](mailto:sfos@connolly.tech?subject=[SFOS] New Maintainer), join the Discord (link below) and PM KALUBE, or message me on telegram @kalubeee.
+If you have any experience developing / maintaining Sailfish - or are keen to learn, [fire me an email](mailto:sfos@connolly.tech?subject=[SFOS]%20New%20Maintainer), join the Discord (link below) and PM KALUBE, or message me on telegram @kalubeee.
 
 A repo containing all useful general information for porting to the OnePlus 6 / enchilada.
 
