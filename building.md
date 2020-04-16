@@ -29,11 +29,6 @@ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod +x ~/bin/repo
 ```
 
-Then add this to your `~/.bashrc`
-```sh
-export PATH="$HOME/bin:$PATH"
-```
-
 Now follow the [OnePlus 5 initial building guide](https://github.com/sailfishos-oneplus5/important/blob/master/INITIAL-BUILDING.md#setup-the-platform-sdk) from `setup the platform sdk`, it's safe to ignore all OnePlus 5 specific information. **NOTE:** where it says `habuild` you can use the alias `ubu` instead.
 
 > Thanks [@deathmist](https://github.com/JamiKettunen) ;)
@@ -76,7 +71,7 @@ mka droidmedia audioflingerglue
 
 `[PLATFORM]`
 ```sh
-bp -gg
+bp
 ```
 
 ## Every build
