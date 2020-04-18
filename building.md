@@ -71,10 +71,8 @@ mka droidmedia audioflingerglue
 
 `[PLATFORM]`
 ```sh
-bp -b hybris/mw/libncicore
-# TODO: Add this to modified build_packages.sh script
+bp
 ```
-
 
 ## Every build
 

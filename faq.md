@@ -12,7 +12,7 @@ Currently not available in Sailfish OS (all devices). I will update if and when 
 
 ### Android Apps
 
-There is some work on porting Anbox to Sailfish OS, it isn't currently a major priority but hopefully we will see some Android app support within the next 6months-1year. There is nothing I can do to add suppoort for Android apps until then.
+There is some work on porting Anbox to Sailfish OS, it isn't currently a major priority and not something I'll be investing time into. If you message me about Android support I will probably ignore you.
 
 ### Updates
 

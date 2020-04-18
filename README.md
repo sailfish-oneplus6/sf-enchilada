@@ -1,16 +1,18 @@
-# Looking for new maintainers!
-
-If you have any experience developing / maintaining Sailfish - or are keen to learn, [fire me an email](mailto:sfos@connolly.tech?subject=[SFOS]%20New%20Maintainer), join the Discord (link below) and PM KALUBE, or message me on telegram @kalubeee.
-
-A repo containing all useful general information for porting to the OnePlus 6 / enchilada.
-
-Hop in the Discord here: https://discord.gg/haVG9Ga
+# Sailfish OS for Enchilada
 
 <img src="images/about.png" alt="about" width="260"></img>
 
-## Build Guide
+# Releases
 
-[Instructions here](building.md)
+All releases will be [posted here](https://github.com/sailfish-oneplus6/sf-enchilada/releases), watching this repo will cause you to be notified every time I release a new version!
+
+# Installing
+
+To properly install Sailfish OS please following [the installation guide](flashing.md)
+
+# Discord
+
+Hop in the Discord here: https://discord.gg/haVG9Ga
 
 # Issues
 
@@ -24,9 +26,11 @@ Please use this repository for all issues with functionality on the device or wi
 * Output of `logcat`
 * Output of `dmesg`
 
-# Releases
+You can connect to the phone by setting an ssh passsword in developer options and then running `ssh nemo@<your ip>`. Run `devel-su` and then save the output of the commands with `>`, for example `dmesg > dmesg.log`.
 
-All releases will be [posted here](https://github.com/sailfish-oneplus6/sf-enchilada/releases), watching this repo will cause you to be notified every time I release a new version!
+## Build Guide
+
+[Instructions here](building.md)
 
 # Pull Requests
 
