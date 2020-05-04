@@ -1,17 +1,14 @@
 # Flashing
 
-## Dual Booting
-
 * Slot A **MUST** be running LOS 16 before Sailfish installation
 * Sailfish **MUST** be flashed with slot A as your active slot.
 * Sailfish is kept entirely isolated from Android data, you can make any changes to slot b without affecting Sailfish.
 * If you want to install OTAs on slot B you **MUST** boot TWRP from slot A (due to the nature of OTAs).
+* **DO NOT** *install* TWRP on slot A as sailfish will no longer boot afterwards.
 
 * Yes, you can run Android 10, or 9, or even Oreo on Slot B with sailfish installed
 
 ## Flashing Instructions
-
-* **DO NOT** *install* TWRP on slot A as sailfish will no longer boot afterwards.
 
 #### Disclaimer: I am not responsible for any loss of data or stability due to what you decided to do to your phone.
 
