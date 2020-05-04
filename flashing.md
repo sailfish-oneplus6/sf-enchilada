@@ -1,18 +1,17 @@
 # Flashing
 
-## NOTE on dual booting
+## Dual Booting
 
-If your current Android system is installed on slot b, you will be able to dual boot between SFOS and android with ease, and you can even run non LOS ROMs (like OOS) on slot b.
+* Slot A **MUST** be running LOS 16 before Sailfish installation
+* Sailfish **MUST** be flashed with slot A as your active slot.
+* Sailfish is kept entirely isolated from Android data, you can make any changes to slot b without affecting Sailfish.
+* If you want to install OTAs on slot B you **MUST** boot TWRP from slot A (due to the nature of OTAs).
 
-**NOTE: Android updates must be flashed from TWRP, with slot A as your active slot (OxygenOS updates are always flashed to the inactive slot).**
-
-If not, you will need to switch your active slot to slot a with `fastboot --set-active=a` and then flash an update package from TWRP. If this doesn't work, you can switch the active slot by booting to TWRP and nvigating to "Reboot" -> "Slot A", which will switch the active slot to A upon next boot.
-
-Sailfish OS will ONLY work if installed to SLOT A due to current limitations in Treble support.
-
-After installation you can switch slots using the fastboot command above OR by running `bootctl set-active-boot-slot <0 OR 1>` on Sailfish OS. On Android you might need `/system/bin/bootctl ...`.
+* Yes, you can run Android 10, or 9, or even Oreo on Slot B with sailfish installed
 
 ## Flashing Instructions
+
+* **DO NOT** *install* TWRP on slot A as sailfish will no longer boot afterwards.
 
 #### Disclaimer: I am not responsible for any loss of data or stability due to what you decided to do to your phone.
 
@@ -29,3 +28,16 @@ fastboot boot twrp-3.3.1-2-enchilada.img # You might need to use a custom build 
 4. Reboot while holding volume up to enter fastboot mode, `fastboot boot twrp-3.3.1-2-$DEVICE.img` again, navigate to the reboot menu and check the current slot, if it's SLOT A then you're good to go, otherwise flash LOS again.
 5. Copy the SFOS install zip to your storage and flash!
 6. Reboot!
+
+
+## Dual Booting Instructions
+
+If your current Android system is installed on slot b, you will be able to dual boot between SFOS and android with ease, you can run any ROM and Android version on slot B.
+
+**NOTE: Android updates must be flashed from TWRP, with slot A as your active slot (OxygenOS updates are always flashed to the inactive slot).**
+
+If not, you will need to switch your active slot to slot a with `fastboot --set-active=a` and then flash an update package from TWRP. If this doesn't work, you can switch the active slot by booting to TWRP and nvigating to "Reboot" -> "Slot A", which will switch the active slot to A upon next boot.
+
+Sailfish OS will ONLY work if installed to SLOT A due to current limitations in Treble support.
+
+After installation you can switch slots using the fastboot command above OR by running `bootctl set-active-boot-slot <0 OR 1>` on Sailfish OS. On Android you might need `/system/bin/bootctl ...`.
