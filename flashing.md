@@ -36,4 +36,4 @@ If not, you will need to switch your active slot to slot a with `fastboot --set-
 
 Sailfish OS will ONLY work if installed to SLOT A due to current limitations in Treble support.
 
-After installation you can switch slots using the fastboot command above OR by running `bootctl set-active-boot-slot <0 OR 1>` on Sailfish OS. On Android you might need `/system/bin/bootctl ...`.
+After installation you can switch slots using the fastboot command above OR by running `devel-su bootctl set-active-boot-slot 1` on Sailfish OS. On Android you might need `/system/bin/bootctl ...` (as root).
