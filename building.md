@@ -8,9 +8,12 @@
 
 # First Time Setup
 
-* Create the file `~/.hadk.env` with [this contents](files/.hadk.env)
-* Create the file `~/.mersdk.profile` with [this contents](files/.mersdk.profile)
-* Create the file `~/.mersdubu.profile` with [this contents](files/.mersdkubu.profile)
+```sh
+cd
+curl -O https://raw.githubusercontent.com/sailfish-oneplus6/sf-enchilada/master/files/.hadk.env
+curl -O https://raw.githubusercontent.com/sailfish-oneplus6/sf-enchilada/master/files/.mersdk.profile
+curl -O https://raw.githubusercontent.com/sailfish-oneplus6/sf-enchilada/master/files/.mersdkubu.profile
+```
 * Modify your `.bashrc` to contain the following:
 ```sh
 export PATH=$HOME/bin:$PATH
@@ -18,7 +21,6 @@ export PLATFORM_SDK_ROOT="/srv/mer"
 export ANDROID_ROOT="$HOME/Sailfish/src"
 alias sfossdk="$PLATFORM_SDK_ROOT/sdks/sfossdk/mer-sdk-chroot"
 ```
-[source](https://github.com/sailfishos-oneplus5/important/blob/master/files/.bashrc)
 
 Download and install `repo`
 
@@ -59,6 +61,8 @@ git clone --recurse-submodules https://github.com/mer-hybris/libhybris hybris/mw
 
 `[HABUILD]`
 ```sh
+. build/envsetup.sh
+breakfast $DEVICE
 mka hybris-hal
 ```
 
