@@ -8,6 +8,8 @@ if [ -d /etc/bash_completion.d ]; then
 fi
 
 export RELEASE=`cat /etc/os-release | grep VERSION_ID | cut -d"=" -f2`
+export PLATFORM_SDK_ROOT="/srv/mer"
+export ANDROID_ROOT=$HOME/sfos/hadk
 
 remote="https://github.com/sailfish-oneplus6"
 
@@ -50,35 +52,12 @@ choose_target() {
    else
      device="enchilada"
      [ "$target" = "2" ] && device="fajita"
-     branch="hybris-16.0"
-     [ "$device" = "fajita" ] && branch="fajita-16.0"
    fi
-
-	if [ "$device" != "$last_device" ]; then
-		if [ ! -z "$last_device" ]; then
-			echo "WARNING: All current changes in SFOS local droid repos WILL be discarded if you continue!"
-			read -p "Would you like to continue? (y/N) " ans
-			ans=`echo "$ans" | xargs | tr "[y]" "[Y]"`
-			if [ "$ans" != "Y" ]; then
-				return 1
-			fi
-
-			echo "Discarded local droid HAL & configs for $last_device!"
-			rm -rf $ANDROID_ROOT/rpm* $ANDROID_ROOT/hybris/droid-{configs,hal-version-}*
-		fi
-
-		printf "Cloning droid HAL & configs for $device..."
-		clone_src "droid-hal-enchilada" "$branch" "rpm" &&
-		clone_src "droid-config-enchilada" "$branch" "hybris/droid-configs" &&
-		clone_src "droid-hal-version-enchilada" "$branch" "hybris/droid-hal-version-$device"
-		(( $? == 0 )) && echo " done!" || echo " fail! exit code: $?"
-
-		echo "$device" > "$ANDROID_ROOT/.last_device"
-	fi
 
 	sed "s/DEVICE=.*/DEVICE=\"$device\"/" -i $HOME/.hadk.env
 	hadk
 }
 
 hadk
-choose_target
+# Only run this after repo sync to prevent weird issues
+[[ -d $ANDROID_ROOT/hybris ]] && choose_target
