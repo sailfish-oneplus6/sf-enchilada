@@ -20,7 +20,7 @@ You must be running OOS 9.x on slot A prior to following these instructions. A q
 fastboot --set-active=b
 fastboot boot twrp-3.3.1-2-enchilada.img # You might need to use a custom build of TWRP if you're on Android 10, you can normally find it on XDA
 ```
-3. Dirty flash Lineage OS 16.0, grab the latest nightly: [enchilada](https://wiki.lineageos.org/devices/enchilada/) `::` [fajita](https://wiki.lineageos.org/devices/fajita/).
+3. Dirty flash Lineage OS 16.0, version lineage-16.0-20200325-nightly-enchilada-signed.zip exactly (enchilada/fajita depending on your device). Example archive here [enchilada](lineage-16.0-20200325-nightly-enchilada-signed.zip) :: [fajita](lineage-16.0-20200325-nightly-fajita-signed.zip)
 4. Reboot while holding volume up to enter fastboot mode, `fastboot boot twrp-3.3.1-2-$DEVICE.img` again, navigate to the reboot menu and check the current slot, if it's SLOT A then you're good to go, otherwise flash LOS again.
 5. Copy the SFOS install zip to your storage and flash!
 6. Reboot!
